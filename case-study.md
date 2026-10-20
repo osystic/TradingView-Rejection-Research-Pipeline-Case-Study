@@ -1,16 +1,40 @@
 # TradingView Rejection Research Pipeline
 
 ## P — Problem & constraints
-Structure noisy minute OHLCV into a defensible research pipeline for rejection/continuation analysis with clear data-quality and chronology controls.
+
+Document a completed minute-level market-research workflow with explicit data-quality checks, engineered features and chronological validation while keeping licensed/raw data and private research artifacts out of the public repository.
 
 ## A — Architecture & decisions
-Chunked acquisition -> validation/cleaning -> ATR/RVOL and structural features -> labels -> chronological split -> scaling/logistic-regression baseline -> feature audits.
+
+The private workflow uses Python/Colab for chunked OHLCV acquisition, validation/cleaning, ATR and relative-volume feature engineering, structural/event features, target preparation and time-ordered modelling.
 
 ## C — Contribution & delivery
-Implemented data checks, feature construction, target preparation and out-of-sample chronological modelling workflows in Colab/Python.
+
+OSYSTIC implemented the private data-quality, feature-construction, target-preparation and chronological modelling workflow together with exported research scripts and retained validation evidence.
+
+## Engineering highlights
+
+- Added explicit checks for missing values, dead candles, time gaps and invalid price structure.
+- Engineered ATR, relative-volume and structural/event features from minute-level market data.
+- Preserved chronological train/test separation to reduce look-ahead leakage.
+- Retained feature-audit and baseline-modelling steps alongside the research pipeline.
+- Kept raw/licensed datasets and API credentials outside the public showcase.
+
+## Technology stack
+
+- Python
+- Google Colab
+- Minute-level OHLCV processing
+- ATR feature engineering
+- Relative-volume feature engineering
+- Chronological validation
+- Feature scaling
+- Baseline statistical modelling
 
 ## E — Evidence & outcomes
-The private source validates the implemented methodology. No live-trading profitability or production execution claim is made.
+
+Private source verifies the implemented data checks, feature engineering and chronological validation methodology. Public claims are limited to documented research-engineering capability.
 
 ## Confidentiality
-Raw/licensed data, API credentials and private research artifacts remain private.
+
+Raw/licensed datasets, API credentials, private notebooks/scripts, client identity and research artifacts remain private.
